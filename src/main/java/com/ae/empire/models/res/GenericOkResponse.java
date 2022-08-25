@@ -8,8 +8,4 @@ public class GenericOkResponse {
   @Getter
   private final String status = "OK";
 
-  public static ResponseEntity<GenericOkResponse> create() {
-    return ResponseEntity.ok(new GenericOkResponse());
-  }
-
 }
