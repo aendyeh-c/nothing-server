@@ -1,5 +1,6 @@
 package com.ae.empire.controllers;
 
+import com.ae.empire.models.res.GenericOkResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +15,9 @@ import java.util.Map;
 public class PingCtrl {
 
   @GetMapping("/ping")
-  public ResponseEntity<Map> ping() {
-    return ResponseEntity.ok(Map.of("status", "OK"));
+  public ResponseEntity<GenericOkResponse> ping() {
+    log.info("Ping received");
+    return GenericOkResponse.create();
   }
 
   @GetMapping("/kill")
