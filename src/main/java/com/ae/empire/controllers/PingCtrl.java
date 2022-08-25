@@ -11,8 +11,8 @@ import java.util.Map;
 @RequestMapping("/api")
 public class PingCtrl {
 
-    @GetMapping("/ping")
-    public ResponseEntity<Map> ping() {
-        return ResponseEntity.ok(Map.of("status", "OK"));
-    }
+  @GetMapping("/ping")
+  public ResponseEntity<Map> ping() {
+    return ResponseEntity.ok(Map.of("status", "OK"));
+  }
 }
